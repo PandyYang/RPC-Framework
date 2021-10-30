@@ -517,8 +517,8 @@ public class TestServer {
         BlogService blogService = new BlogServiceImpl();
         Map<String, Object> serviceProvide = new HashMap<>();
         // 暴露两个服务接口， 即在RPCServer中加一个HashMap
-        serviceProvide.put("com.ganghuan.myRPCVersion2.service.UserService",userService);
-        serviceProvide.put("com.ganghuan.myRPCVersion2.service.BlogService",blogService);
+        serviceProvide.put("com.pandy.myRPCVersion2.service.UserService",userService);
+        serviceProvide.put("com.pandy.myRPCVersion2.service.BlogService",blogService);
 
         RPCServer RPCServer = new SimpleRPCRPCServer(serviceProvide);
         RPCServer.start(8899);
@@ -712,8 +712,8 @@ public class TestServer {
         BlogService blogService = new BlogServiceImpl();
 
 //        Map<String, Object> serviceProvide = new HashMap<>();
-//        serviceProvide.put("com.ganghuan.myRPCVersion2.service.UserService",userService);
-//        serviceProvide.put("com.ganghuan.myRPCVersion2.service.BlogService",blogService);
+//        serviceProvide.put("com.pandy.myRPCVersion2.service.UserService",userService);
+//        serviceProvide.put("com.pandy.myRPCVersion2.service.BlogService",blogService);
         ServiceProvider serviceProvider = new ServiceProvider();
         serviceProvider.provideServiceInterface(userService);
         serviceProvider.provideServiceInterface(blogService);
